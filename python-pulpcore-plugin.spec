@@ -52,7 +52,10 @@ rm -rf %{pypi_name}.egg-info
 
 %files -n python3-%{pypi_name}
 %doc README.rst
-%{python3_sitelib}/pulpcore
+# These files get copied over during the build process from pulpcore
+%exclude %{python3_sitelib}/pulpcore/*.py*
+%exclude %{python3_sitelib}/pulpcore/__pycache__/*.py*
+%{python3_sitelib}/pulpcore/plugin
 %{python3_sitelib}/pulpcore_plugin-%{version}-py?.?.egg-info
 
 %changelog
