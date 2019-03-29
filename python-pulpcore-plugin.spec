@@ -2,7 +2,7 @@
 %global pypi_name pulpcore-plugin
 
 Name:           python-%{pypi_name}
-Version:        0.1.0b21
+Version:        0.1.0rc1
 Release:        1%{?dist}
 Summary:        Pulp Plugin API
 
@@ -29,7 +29,7 @@ Summary:        %{summary}
 Requires:       python3dist(aiofiles)
 Requires:       python3dist(aiohttp)
 Requires:       python3dist(backoff)
-Requires:       python3dist(pulpcore) >= 3.0.0b22
+Requires:       python3dist(pulpcore) >= 3.0.0rc1
 %description -n python3-%{pypi_name}
 **Pulp Plugin API**The Pulp Plugin API is an essential part of the Pulp Project
 3.0+ < which provides a set of base classes that can be implemented in plugins
@@ -59,5 +59,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/pulpcore_plugin-%{version}-py?.?.egg-info
 
 %changelog
+* Fri Mar 29 2019 Mike DePaulo <mikedep333@redhat.com> - 0.1.0rc1-1
+- Update to 0.1.0rc1-1
+
 * Tue Mar 26 2019 Mike DePaulo <mikedep333@redhat.com> - 0.1.0b21-1
 - Initial package.
